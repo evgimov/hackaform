@@ -1,4 +1,4 @@
-###Hackaform app###
+Hackaform app
 The web application to help people find their dream team for the hackathon.
 
 
