@@ -1,14 +1,14 @@
-#Hackaform app
+# Hackaform app
 
-##The web application to help people find their dream team for the hackathon.
+## The web application to help people find their dream team for the hackathon.
 
 
-###Features: 
+### Features: 
 - Provide suggestions in picking the right team
 - Provide a way to be listed in the list of participants
 
 
-###Benefits:
+### Benefits:
 - form a team before the hackathon 
 - get to know your team members before the hackathon
 - maximize the your efficiency as a team member
