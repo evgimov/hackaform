@@ -27,8 +27,8 @@ class Skill extends React.Component {
     render() {
         const skillNames = ["Angular", "Back-end Development", "React", "HTML", "CSS","Project Management","Dancing","Making Coffee"];
         return (
-            <div className="skillWrapper">
-                <h1 className="skillTitle">What are your skills?</h1>
+            <div className="wrapper">
+                <h1 className="title">What are your skills?</h1>
                 <div className="skillItemsWrapper">
                     {   
                         skillNames.map((skillName) => (
