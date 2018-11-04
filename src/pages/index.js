@@ -7,6 +7,7 @@ import SignupHeader from '../components/SignupHeader';
 import UserProfile from './../components/UserProfile'
 import Footer from './../components/Footer'
 
+
 const IndexPage = () => (
   <Layout>
     <SignupHeader></SignupHeader>

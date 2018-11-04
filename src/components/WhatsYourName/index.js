@@ -5,14 +5,21 @@ class WhatsYourName extends Component {
     constructor(props) {
         super(props);
         this.state = {
+            InputText:''
         };
-
+        this.handleInputChange = this.handleInputChange.bind(this);
     }
+
+    handleInputChange(event){
+    this.setState( {InputText:event.target.value} );
+    console.log(this.state.InputText);
+} 
+
     render() {
         return (
             <div class="name">
             <Label >Hello! What's your Name? </Label>
-               <Input  placeholder="Full Name"></Input>
+               <Input type="text" name="InputText" onChange={this.handleInputChange}  placeholder="Full Name" required="required" ></Input>
             </div>
         );
     }
