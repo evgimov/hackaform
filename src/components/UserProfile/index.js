@@ -16,7 +16,7 @@ class UserProfile extends Component {
             <div>
             <div class='user-profile'>
                 <h3>USER PROFILE</h3>
-                <p class="subtext">LET'S GET DOWN WITH THE BASICS</p>
+                <p class="subtext">LET'S GET DOWN WITH THE BASICS.</p>
                
                
                 </div>
