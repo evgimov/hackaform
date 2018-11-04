@@ -10,15 +10,12 @@ class UserProfile extends Component {
 
         };
     }
-
     render() {
         return (
             <div>
             <div class='user-profile'>
                 <h3>USER PROFILE</h3>
                 <p class="subtext">LET'S GET DOWN WITH THE BASICS.</p>
-               
-               
                 </div>
                 <div class="nav-buttons">
                     <NavigationButtons></NavigationButtons>
