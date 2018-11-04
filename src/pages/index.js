@@ -9,7 +9,6 @@ import WhatsYourName from '../components/WhatsYourName/index';
 import UserProfile from '../components/UserProfile/index';
 import Optional from '../components/Optional';
 
-
 const IndexPage = () => (
   <Layout>
     <SignupHeader></SignupHeader>
