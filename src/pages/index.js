@@ -8,12 +8,11 @@ import Skill from './app/Skill'
 import WhatsYourName from '../components/WhatsYourName/index'
 import UserProfile from '../components/UserProfile/index'
 import Optional from './app/Optional'
+import { Redirect } from '@reach/router'
 
 const IndexPage = () => (
   <Layout>
-    <SignupHeader />
-
-    <UserProfile />
+    <Redirect to="/app/login/" />
   </Layout>
 )
 
