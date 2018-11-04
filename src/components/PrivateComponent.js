@@ -1,20 +1,24 @@
 import React from 'react'
 import { Redirect } from '@reach/router'
 
-const globalWindow = typeof window !== 'undefined' && window
+class PrivateComponent extends React.Component {
+  componentDidMount() {
+    const sessionStorage =
+      typeof window !== 'undefined' && window.sessionStorage
+    const { authedUser } = JSON.parse(sessionStorage.getItem('AUTH_KEY')) || {
+      authedUser: null,
+    }
+    this.authedUser = authedUser
+  }
 
-export default function PrivateComponent({
-  path,
-  component: Component,
-  ...rest
-}) {
-  const { authedUser } = JSON.parse(
-    globalWindow.sessionStorage.getItem('AUTH_KEY')
-  ) || { authedUser: null }
-
-  return authedUser !== null ? (
-    <Component path={path} {...rest} />
-  ) : (
-    <Redirect to="/app/login" noThrow />
-  )
+  render() {
+    const { path, component: Component, ...rest } = this.props
+    return this.authedUser !== null ? (
+      <Component path={path} {...rest} />
+    ) : (
+      <Redirect to="/app/login" noThrow />
+    )
+  }
 }
+
+export default PrivateComponent
