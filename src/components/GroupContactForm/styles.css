@@ -1,0 +1,23 @@
+.group-contact-form{
+z-index: 15;
+top: 50%;
+left: 50%;
+margin: -284px 0 0 -150px;
+position:absolute;
+}
+input[type=text], input[type=email],input[type=URL]{
+  
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-bottom: 11px;
+    margin-right: 17px;
+   
+}
+input[type=submit]{
+height: 60px;
+width: 80px;
+background-color: #2D2D2D;
+color: white;
+font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+
+}
