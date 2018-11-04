@@ -2,6 +2,7 @@ import React from 'react'
 import { navigate } from 'gatsby'
 import { Redirect } from '@reach/router'
 import netlifyIdentity from 'netlify-identity-widget'
+// import '../../components/SignupHeader.css'
 
 const globalWindow = typeof window !== 'undefined' && window
 
@@ -35,17 +36,33 @@ class Login extends React.Component {
       })
     )
 
-    this.setState({ authedUser }, () => navigate('/app/dashboard'))
+    this.setState({ authedUser }, () => navigate('/app/'))
   }
 
   render() {
     const { authedUser } = this.state
 
     if (authedUser) {
-      return <Redirect from="app/login" to="app/dashboard" noThrow />
+      return <Redirect from="app/login" to="app/" noThrow />
     }
 
-    return <button onClick={() => netlifyIdentity.open()}>Login</button>
+    return (
+      <div className="signup">
+        <div className="signupHeaderTitle">
+          <h1 className="SignupTitle black big">
+            <span>Hacka</span>
+            form
+          </h1>
+          <h3 className="SignupSubtitle black big">Build your dream team</h3>
+          <button
+            className="btn hackbutton"
+            onClick={() => netlifyIdentity.open()}
+          >
+            Login
+          </button>
+        </div>
+      </div>
+    )
   }
 }
 
