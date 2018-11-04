@@ -1,0 +1,55 @@
+.header{
+    background-color: #2D2D2D;
+    position: fixed;
+    width: 100%;
+    padding: 10px 0;
+    z-index: 100;
+    transition: 0.8s cubic-bezier(0.2,0.8,0.2,1);
+
+    display: flex;
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+}
+    
+.navGroup {
+    color: #797979;
+    padding: 0 40px;
+}
+
+.signupHeaderTitle {
+    color: white;
+    text-transform: uppercase;
+    padding: 0 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+.SignupTitleGroup {
+    color: white;  
+    text-transform: uppercase;
+    padding: 0 40px;
+}
+
+.SignupTitle {
+    margin: 0;
+    font-size: 40px
+}
+
+.header-title {
+    color: white;  
+    text-transform: uppercase;
+    padding: 0 40px;
+}
+
+span {
+    font-weight:300;
+}
+
+.SignupSubtitle {
+    font-size:15px;
+    font-weight: 300;
+    margin: 0;
+}

@@ -1,30 +1,29 @@
 import React from "react";
-import styled from "styled-components";
+import "./SignupHeader.css";
 
-const SignupHeaderGroup = styled.div`
-    background-color: #2D2D2D;
-    width: 100%;
 
-`
-const NavigationGroup = styled.div`
-`
-const SignupTitleGroup = styled.div`
-`
-const SignupTitle = styled.h1`
-    color: white;
-`
-const SignupSubtitle = styled.h3`
-    color: white;
-`
+class SignupHeader extends React.Component {
+    constructor(props) {
+        super(props);
 
-const SignupHeader = props => (
-    <SignupHeaderGroup>
-        <NavigationGroup></NavigationGroup>
-        <SignupTitleGroup>
-            <SignupTitle>Hackaform</SignupTitle>
-            <SignupSubtitle>Build your dream team</SignupSubtitle>
-        </SignupTitleGroup>
-    </SignupHeaderGroup>
-)
+        this.state={};
+    }
+    render(){
+        return(
+            <div>
+            <div className="header">
+                <div className="navGroup">
+                    erer >  dewrew > 
+                </div>
+                <div className="signupHeaderTitle">
+                    <h1 className="SignupTitle"><span>Hacka</span>form</h1>
+                    <h3 className="SignupSubtitle">Build your dream team</h3>
+                </div>
+            </div>
+            </div>
+            
+        )
+    }
+};
 
-export default SignupHeader;
+export default(SignupHeader);
