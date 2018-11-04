@@ -45,7 +45,23 @@ class Login extends React.Component {
       return <Redirect from="app/login" to="app/dashboard" noThrow />
     }
 
-    return <button onClick={() => netlifyIdentity.open()}>Login</button>
+    return (
+      <div className="signup">
+        <div className="signupHeaderTitle">
+          <h1 className="SignupTitle black big">
+            <span>Hacka</span>
+            form
+          </h1>
+          <h3 className="SignupSubtitle black big">Build your dream team</h3>
+          <button
+            className="btn hackbutton"
+            onClick={() => netlifyIdentity.open()}
+          >
+            Login
+          </button>
+        </div>
+      </div>
+    )
   }
 }
 
