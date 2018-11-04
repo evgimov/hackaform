@@ -11,7 +11,6 @@ class UserProfile extends Component {
     this.state = {}
   }
   render() {
-    console.log(window.location.pathname)
     return (
       <div>
         <div className="user-profile">

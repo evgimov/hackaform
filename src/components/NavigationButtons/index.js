@@ -2,6 +2,9 @@ import React, { Component } from 'react'
 import { Link } from 'gatsby'
 import './styles.css'
 import WhatsYourName from './../WhatsYourName'
+
+const globalLocation = typeof window !== 'undefined' && window.location
+
 class NavigationButtons extends Component {
   constructor(props) {
     super(props)
@@ -9,7 +12,7 @@ class NavigationButtons extends Component {
   }
 
   renderPath() {
-    switch (window.location.pathname) {
+    switch (globalLocation.pathname) {
       case '/app/dashboard':
         return (
           <div>
