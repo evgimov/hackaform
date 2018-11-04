@@ -1,6 +1,7 @@
 import React from 'react'
 import { navigate } from 'gatsby'
 import { Redirect } from '@reach/router'
+import netlifyIdentity from 'netlify-identity-widget'
 
 class Login extends React.Component {
   componentDidMount() {
@@ -9,11 +10,11 @@ class Login extends React.Component {
     ) || { authedUser: null }
 
     if (authedUser === null) {
-      window.netlifyIdentity && window.netlifyIdentity.open()
+      netlifyIdentity && netlifyIdentity.open()
     }
 
-    window.netlifyIdentity.on('login', user => this.handleLogin(user))
-    window.netlifyIdentity.on('logout', this.handleLogout)
+    netlifyIdentity.on('login', user => this.handleLogin(user))
+    netlifyIdentity.on('logout', this.handleLogout)
   }
 
   handleLogout = () => window.sessionStorage.removeItem('AUTH_KEY')
@@ -38,7 +39,7 @@ class Login extends React.Component {
       return <Redirect from="app/login" to="app/dashboard" noThrow />
     }
 
-    return <button onClick={() => window.netlifyIdentity.open()}>Login</button>
+    return <button onClick={() => netlifyIdentity.open()}>Login</button>
   }
 }
 
