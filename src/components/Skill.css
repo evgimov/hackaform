@@ -1,17 +1,9 @@
-.skillWrapper{
-    text-align: center;
-    width: 50%;
-    margin: 40px auto;
-}
-
 .skillItemsWrapper{
     display: flex;
     flex-wrap: wrap;
 }
 
-.skillTitle{
-    text-transform: uppercase;
-}
+
 
 .btn {
     margin: 10px;
