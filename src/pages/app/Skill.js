@@ -1,7 +1,7 @@
 import React from 'react'
 import NavigationButtons from '../../components/NavigationButtons/index'
 import SignupHeader from '../../components/SignupHeader'
-import '../../Components/NavigationButtons/styles.css'
+import '../../components/NavigationButtons/styles.css'
 import './Skill.css'
 
 class Skill extends React.Component {
