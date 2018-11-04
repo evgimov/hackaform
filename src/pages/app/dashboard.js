@@ -1,12 +1,15 @@
 import React from 'react'
 import { navigate } from 'gatsby'
 import netlifyIdentity from 'netlify-identity-widget'
+import UserProfile from '../../components/UserProfile/index'
+import SignupHeader from '../../components/SignupHeader'
 
 const globalWindow = typeof window !== 'undefined' && window
 
 export default () => (
   <div>
-    <h1>Dashboard</h1>
+    <SignupHeader />
+    <UserProfile />
     <button
       onClick={() => {
         netlifyIdentity.logout()

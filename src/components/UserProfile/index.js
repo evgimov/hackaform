@@ -1,29 +1,30 @@
-import React, { Component } from "react"
-import './styles.css';
-import NavigationButtons from './../NavigationButtons';
+import React, { Component } from 'react'
+import NavigationButtons from './../NavigationButtons'
+import WhatsYourName from '../WhatsYourName/index'
+
+import './styles.css'
 
 class UserProfile extends Component {
-    constructor(props) {
-        super(props);
+  constructor(props) {
+    super(props)
 
-        this.state = {
-
-        };
-    }
-    render() {
-        return (
-            <div>
-            <div class='user-profile'>
-                <h3>USER PROFILE</h3>
-                <p class="subtext">LET'S GET DOWN WITH THE BASICS.</p>
-                </div>
-                <div class="nav-buttons">
-                    <NavigationButtons></NavigationButtons>
-                </div>
-            </div>
-
-        );
-    }
-
+    this.state = {}
+  }
+  render() {
+    return (
+      <div>
+        <div className="user-profile">
+          <h3>USER PROFILE</h3>
+          <p className="subtext">LET'S GET DOWN WITH THE BASICS.</p>
+        </div>
+        <div>
+          <WhatsYourName />
+        </div>
+        <div className="nav-buttons">
+          <NavigationButtons />
+        </div>
+      </div>
+    )
+  }
 }
-export default (UserProfile);
+export default UserProfile
