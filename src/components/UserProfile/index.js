@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import NavigationButtons from './../NavigationButtons'
+import NavigationButtons from '../NavigationButtons'
 import WhatsYourName from '../WhatsYourName/index'
 
 import './styles.css'

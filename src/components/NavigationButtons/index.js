@@ -13,7 +13,7 @@ class NavigationButtons extends Component {
 
   renderPath() {
     switch (globalLocation.pathname) {
-      case '/app':
+      case '/app/':
         return (
           <div>
             <Link to="/app/skills">
@@ -60,6 +60,43 @@ class NavigationButtons extends Component {
             </div>
             <div>
               <Link to="/app/skills">
+                <input
+                  type="button"
+                  className="back-button"
+                  defaultValue="BACK"
+                />
+              </Link>
+            </div>
+          </div>
+        )
+      case '/app/expertise':
+        return (
+          <div>
+            <div>
+              <Link to="/app/results">
+                <input
+                  type="button"
+                  className="next-button"
+                  defaultValue="NEXT"
+                />
+              </Link>
+            </div>
+            <div>
+              <Link to="/app/role">
+                <input
+                  type="button"
+                  className="back-button"
+                  defaultValue="BACK"
+                />
+              </Link>
+            </div>
+          </div>
+        )
+      case '/app/result':
+        return (
+          <div>
+            <div>
+              <Link to="/app/expertise">
                 <input
                   type="button"
                   className="back-button"
