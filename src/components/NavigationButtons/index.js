@@ -13,7 +13,7 @@ class NavigationButtons extends Component {
 
   renderPath() {
     switch (globalLocation.pathname) {
-      case '/app/dashboard':
+      case '/app':
         return (
           <div>
             <Link to="/app/skills">
@@ -37,7 +37,7 @@ class NavigationButtons extends Component {
                 />
               </Link>
             </div>
-            <Link to="/app/dashboard">
+            <Link to="/app">
               <input
                 type="button"
                 className="back-button"

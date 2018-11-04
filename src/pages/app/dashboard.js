@@ -3,6 +3,7 @@ import { navigate } from 'gatsby'
 import netlifyIdentity from 'netlify-identity-widget'
 import UserProfile from '../../components/UserProfile/index'
 import SignupHeader from '../../components/SignupHeader'
+import NavigationButtons from '../../components/NavigationButtons/index'
 
 const globalWindow = typeof window !== 'undefined' && window
 

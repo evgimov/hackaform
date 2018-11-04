@@ -11,7 +11,7 @@ export default () => (
   <Layout>
     <Router basepath="/app">
       <Login path="/login" />
-      <PrivateComponent path="/dashboard" component={Dashboard} />
+      <PrivateComponent path="/" component={Dashboard} />
       <PrivateComponent path="/skills" component={Skill} />
       <PrivateComponent path="/role" component={Role} />
     </Router>
