@@ -1,13 +1,15 @@
 import React from 'react'
 import { Redirect } from '@reach/router'
 
+const globalWindow = typeof window !== 'undefined' && window
+
 export default function PrivateComponent({
   path,
   component: Component,
   ...rest
 }) {
   const { authedUser } = JSON.parse(
-    window.sessionStorage.getItem('AUTH_KEY')
+    globalWindow.sessionStorage.getItem('AUTH_KEY')
   ) || { authedUser: null }
 
   return authedUser !== null ? (

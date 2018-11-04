@@ -3,37 +3,43 @@ import { navigate } from 'gatsby'
 import { Redirect } from '@reach/router'
 import netlifyIdentity from 'netlify-identity-widget'
 
+const globalWindow = typeof window !== 'undefined' && window
+
 class Login extends React.Component {
+  state = {
+    authedUser: null,
+  }
+
   componentDidMount() {
     const { authedUser } = JSON.parse(
-      window.sessionStorage.getItem('AUTH_KEY')
+      globalWindow.sessionStorage.getItem('AUTH_KEY')
     ) || { authedUser: null }
 
     if (authedUser === null) {
-      netlifyIdentity && netlifyIdentity.open()
+      // netlifyIdentity.open()
+    } else {
+      this.setState({ authedUser })
     }
 
     netlifyIdentity.on('login', user => this.handleLogin(user))
     netlifyIdentity.on('logout', this.handleLogout)
   }
 
-  handleLogout = () => window.sessionStorage.removeItem('AUTH_KEY')
+  handleLogout = () => globalWindow.sessionStorage.removeItem('AUTH_KEY')
 
   handleLogin = authedUser => {
-    window.sessionStorage.setItem(
+    globalWindow.sessionStorage.setItem(
       'AUTH_KEY',
       JSON.stringify({
         authedUser,
       })
     )
 
-    navigate('/app/dashboard')
+    this.setState({ authedUser }, () => navigate('/app/dashboard'))
   }
 
   render() {
-    const { authedUser } = JSON.parse(
-      window.sessionStorage.getItem('AUTH_KEY')
-    ) || { authedUser: null }
+    const { authedUser } = this.state
 
     if (authedUser) {
       return <Redirect from="app/login" to="app/dashboard" noThrow />
